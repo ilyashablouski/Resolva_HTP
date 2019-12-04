@@ -71,7 +71,7 @@ gulp.task('watch', gulp.series('browserSync', function() {
 gulp.task('grid', function(done) {
   smartgrid('src/less', {
     container: {
-      maxWidth: '965px',
+      maxWidth: '1170px',
     },
   });
 

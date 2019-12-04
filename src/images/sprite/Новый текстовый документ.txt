@@ -1,0 +1,7 @@
+<i class="sprite sprite-arrow"></i>
+<i class="sprite sprite-email"></i>
+<i class="sprite sprite-localizer-bl"></i>
+<i class="sprite sprite-localizer-wh"></i>
+<i class="sprite sprite-phone-bl"></i>
+<i class="sprite sprite-phone-wh"></i>
+<i class="sprite sprite-time"></i>

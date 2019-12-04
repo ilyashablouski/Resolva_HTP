@@ -3,6 +3,73 @@
 
 .reset();
 
+@font-face {
+  font-family: "OpenSans";
+  src: url('../fonts/OpenSans/OpenSans-Regular.eot');
+  src: url('../fonts/OpenSans/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype'),
+    url('../fonts/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url('../fonts/OpenSans-Bold/OpenSans-Bold.eot');
+  src: url('../fonts/OpenSans-Bold/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans-Bold/OpenSans-Bold.ttf') format('truetype'),
+    url('../fonts/OpenSans-Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url('../fonts/OpenSans-SemiBold/OpenSans-SemiBold.eot');
+  src: url('../fonts/OpenSans-SemiBold/OpenSans-SemiBold.woff2') format('woff2'),
+    url('../fonts/OpenSans-SemiBold/OpenSans-SemiBold.woff') format('woff'),
+    url('../fonts/OpenSans-SemiBold/OpenSans-SemiBold.ttf') format('truetype'),
+    url('../fonts/OpenSans-SemiBold/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url('../fonts/Raleway-Medium/Raleway-Medium.eot');
+  src: url('../fonts/Raleway-Medium/Raleway-Medium.woff2') format('woff2'),
+    url('../fonts/Raleway-Medium/Raleway-Medium.woff') format('woff'),
+    url('../fonts/Raleway-Medium/Raleway-Medium.ttf') format('truetype'),
+    url('../fonts/Raleway-Medium/Raleway-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway-SemiBold";
+  src: url('../fonts/Raleway-SemiBold/Raleway-SemiBold.eot');
+  src: url('../fonts/Raleway-SemiBold/Raleway-SemiBold.woff2') format('woff2'),
+    url('../fonts/Raleway-SemiBold/Raleway-SemiBold.woff') format('woff'),
+    url('../fonts/Raleway-SemiBold/Raleway-SemiBold.ttf') format('truetype'),
+    url('../fonts/Raleway-SemiBold/Raleway-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url('../fonts/Raleway-Bold/Raleway-Bold.eot');
+  src: url('../fonts/Raleway-Bold/Raleway-Bold.woff2') format('woff2'),
+    url('../fonts/Raleway-Bold/Raleway-Bold.woff') format('woff'),
+    url('../fonts/Raleway-Bold/Raleway-Bold.ttf') format('truetype'),
+    url('../fonts/Raleway-Bold/Raleway-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: none;
@@ -54,22 +121,64 @@ input[type="search"] {
   /* IE 10+ */
 }
 
-.wrapper {
-  font-family: "Work Sans", sans-serif;
-  font-size: 14px;
-}
-
 h1,
 .h1 {
-
+  font-size: 56px;
+  line-height: 76px;
+  color: #FFFFFF;
 }
 
-h2{
+h2 {}
 
+body {
+  margin: 0 auto;
+  max-width: 1440px;
+  font-family: "Raleway-Medium";
+  font-size: 20px;
 }
 
-.text {
-  font-size: 14px;
-  line-height: 27.7px;
-  color: @colorBlockText;
+.intro {
+  background: linear-gradient(0deg, rgba(62, 53, 76, 0.6),
+      rgba(62, 53, 76, 0.6)), url(../images/backgroung-head.jpg);
+  opacity: 0.9;
+}
+
+.header-upper {
+  width: 100%;
+  background: #FFFFFF;
+
+  &__content {
+    .row-flex;
+    .wrapper();
+    font-family: "OpenSans";
+    font-size: 14px;
+  }
+
+  &__phone {
+    margin-left: auto;
+  }
+}
+
+.sprite {
+  background-image: url(../images/sprite/spritesheet.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.sprite-localizer-bl {
+  width: 14px;
+  height: 14px;
+  background-position: -74px -5px;
+}
+
+.sprite-time {
+  width: 14px;
+  height: 14px;
+  background-position: -188px -5px;
+}
+
+.sprite-phone-bl {
+  width: 14px;
+  height: 14px;
+  background-position: -131px -5px;
 }
