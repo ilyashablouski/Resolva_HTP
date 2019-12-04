@@ -1,5 +1,5 @@
 {
-  "name": "Resolva_HTP",
+  "name": "resolva_htp",
   "version": "1.0.0",
   "description": "Adaptive cross browser layout Resolva",
   "main": "gulpfile.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ilyashablovsky/Resolva_HTP.git"
   },
-  "author": "",
+  "author": "Ilya Shablovskiy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ilyashablovsky/Resolva_HTP.git/issues"
