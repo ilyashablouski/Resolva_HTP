@@ -80,6 +80,7 @@
 html,
 body {
   height: 100%;
+  font-size: 20px;
 }
 
 a {
@@ -148,7 +149,7 @@ body {
   background: #FFFFFF;
 
   &__content {
-    .row-flex;
+    display: flex;
     .wrapper();
     font-family: "OpenSans";
     font-size: 14px;
@@ -163,22 +164,45 @@ body {
   background-image: url(../images/sprite/spritesheet.png);
   background-repeat: no-repeat;
   display: inline-block;
+
+  &__localizer-bl {
+    width: 14px;
+    height: 14px;
+    background-position: -74px -5px;
+  }
+
+  &__time {
+    width: 14px;
+    height: 14px;
+    background-position: -188px -5px;
+  }
+
+  &__phone-bl {
+    width: 14px;
+    height: 14px;
+    background-position: -131px -5px;
+  }
 }
 
-.sprite-localizer-bl {
-  width: 14px;
-  height: 14px;
-  background-position: -74px -5px;
+.header-main {
+  background: rgba(255, 255, 255, 0.6);
+
+  &__content {
+    .row-flex();
+    .wrapper();
+    justify-content: space-between;
+  }
 }
 
-.sprite-time {
-  width: 14px;
-  height: 14px;
-  background-position: -188px -5px;
+.logo {
+  .col();
 }
 
-.sprite-phone-bl {
-  width: 14px;
-  height: 14px;
-  background-position: -131px -5px;
+.nav {
+  .col();
+  color: #474747;
+}
+
+.intro-header {
+  .size(8);
 }
