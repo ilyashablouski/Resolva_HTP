@@ -40,7 +40,7 @@
             <span class="header-adress__text">Минск, ул Домбровская 9</span>
           </div>
 
-          <div class="time">
+          <div class="time header-upper__time">
             <i class="sprite sprite__time"></i>
             <span class="time__text">Пн-Пт 9.00 - 18.00</span>
           </div>
@@ -60,7 +60,7 @@
 
       <div class="header-main">
         <div class="header-main__content">
-          <div class="logo logo__inner">
+          <div class="logo header-main__logo">
             <a href="index.html"><img src="images/logo/resolva-logo.png" alt="resolva"></a>
           </div>
           <nav class="nav">
@@ -75,24 +75,71 @@
       </div>
     </header>
 
-    <h1 class="intro-header">Вступить в Парк высоких технологий (ПВТ)</h1>
-    <div class="capabilities-items">
-      <div class="capabilities-item">
-        <img src="images/icons/calendar.png" alt="calendar" class="capabilities-item__icon">
-        <div class="capabilities-item__text">Готовим проект для ПВТ за 10 дней</div>
+    <div class="intro__inner">
+      <h1 class="intro-header intro__intro-header">Вступить в Парк высоких технологий (ПВТ)</h1>
+
+      <form action="#" method="POST" class="form-request intro__form-request">
+        <input type="tel" class="phone-input" name="tel" placeholder="Телефон" required>
+        <button type="submit" class="button form-request__button">Оставить заявку</button>
+      </form>
+
+      <div class="capabilities-items intro__capabilities-items">
+        <div class="capabilities-item capabilities-item res-ml">
+          <div class="capabilities-item__image">
+            <img src="images/icons/calendar.png" alt="calendar" class="capabilities-item__icon">
+          </div>
+          <div class="capabilities-item__text">Готовим проект для ПВТ за 10 дней</div>
+        </div>
+        <div class="capabilities-item">
+          <div class="capabilities-item__image">
+            <img src="images/icons/question.png" alt="question" class="capabilities-item__icon">
+          </div>
+          <div class="capabilities-item__text">Юридические консультации для IT компаний</div>
+        </div>
+        <div class="capabilities-item">
+          <div class="capabilities-item__image">
+            <img src="images/icons/examination.png" alt="examination" class="capabilities-item__icon">
+          </div>
+          <div class="capabilities-item__text">Бухгалтерская экспертиза</div>
+        </div>
+        <div class="capabilities-item capabilities-item res-mr">
+          <div class="capabilities-item__image">
+            <img src="images/icons/team.png" alt="team" class="capabilities-item__icon">
+          </div>
+          <div class="capabilities-item__text">Трудовые отношения в IT</div>
+        </div>
       </div>
-      <div class="capabilities-item">
-        <img src="images/icons/question.png" alt="question" class="capabilities-item__icon">
-        <div class="capabilities-item__text">Юридические консультации для IT компаний</div>
+    </div>
+  </section>
+
+  <section class="advantages-container">
+    <div class="advantages-container__content">
+      <h2 class="h2">Почему стоит работать с нами?</h2>
+      <div class="advantages-items">
+        <div class="advantages-item">
+          <p class="advantages-item__text">Мы досконально знаем все правила и процедуры ПВТ</p>
+          <div class="advantages-item__image"><img src="images/icons/certificate.png" alt="certificate"></div>
+        </div>
+
+        <div class="advantages-item">
+          <p class="advantages-item__text">Анализируем деятельность клиента и убираем «узкие» места, мешающие вступить в
+            Парк</p>
+          <div class="advantages-item__image"><img src="images/icons/research.png" alt="research"></div>
+        </div>
+        
+        <div class="advantages-item">
+          <p class="advantages-item__text">Адаптируем бизнес-процессы клиента под новый статус</p>
+          <div class="advantages-item__image"><img src="images/icons/process .png" alt="process"></div>
+        </div>
+        
+        <div class="advantages-item">
+          <p class="advantages-item__text">Помогаем своим клиентам соблюдать правила ПВТ и после получения статуса
+            резидента</p>
+          <div class="advantages-item__image"><img src="images/icons/social-care.png" alt="social-care"></div>
+        </div>
       </div>
-      <div class="capabilities-item">
-        <img src="images/icons/examination.png" alt="examination" class="capabilities-item__icon">
-        <div class="capabilities-item__text">Бухгалтерская экспертиза</div>
-      </div>
-      <div class="capabilities-item">
-        <img src="images/icons/team.png" alt="team" class="capabilities-item__icon">
-        <div class="capabilities-item__text">Трудовые отношения в IT</div>
-      </div>
+
+      <a href="#" class="button-modal">Оставить заявку</a>
     </div>
   </section>
 
