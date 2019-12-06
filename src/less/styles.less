@@ -85,6 +85,7 @@ html,
 body {
   height: 100%;
   font-size: 20px;
+  height: 3000px;
 }
 
 a {
@@ -183,15 +184,21 @@ body {
 
   &__content {
     display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
     .wrapper();
     padding-top: 10px;
     padding-bottom: 11px;
     font-family: "OpenSans";
     font-size: 14px;
+
+    .sm(justify-content, space-between);
   }
 
   &__phone {
     margin-left: auto;
+
+    .xs(margin-top, 5px);
   }
 
   &__time {
@@ -206,6 +213,16 @@ body {
   &__text {
     margin-left: 10px;
   }
+
+  .sm(margin, 0);
+  .size-xs(6);
+
+  .xs-block( {
+      text-align: center;
+      justify-content: center;
+    }
+
+  );
 }
 
 .time {
@@ -215,6 +232,16 @@ body {
   &__text {
     margin-left: 10px;
   }
+
+  .sm(margin, 0);
+  .size-xs(6);
+
+  .xs-block( {
+      text-align: center;
+      justify-content: center;
+    }
+
+  );
 }
 
 .phone {
@@ -224,6 +251,15 @@ body {
   &__text {
     margin-right: 1px;
   }
+
+  .sm(margin, 0);
+
+  .xs-block( {
+      flex-grow: 1;
+      justify-content: center;
+    }
+
+  )
 }
 
 .sprite {
@@ -234,20 +270,20 @@ body {
   &__localizer-bl {
     width: 14px;
     height: 14px;
-    background-position: -74px -5px;
+    background-position: -82px -5px;
   }
 
   &__time {
     width: 14px;
     height: 14px;
-    background-position: -188px -5px;
+    background-position: -196px -5px;
   }
 
   &__phone-bl {
     margin-right: 10px;
     width: 14px;
     height: 14px;
-    background-position: -131px -5px;
+    background-position: -139px -5px;
   }
 
   &__localizer-bl {
@@ -270,6 +306,8 @@ body {
   &__logo {
     margin-top: -9px;
     margin-left: -12px;
+
+    .lg(margin, 0 auto);
   }
 
 
@@ -287,30 +325,93 @@ body {
   &__link {
     &:nth-child(6) {
       margin-left: 52px;
+      .size-sm(6);
+
+      .sm-block( {
+          text-align: center;
+        }
+
+      );
     }
 
     &:nth-child(5) {
       margin-left: 52px;
+      .size-sm(6);
+
+      .sm-block( {
+          text-align: center;
+        }
+
+      );
     }
 
     &:nth-child(4) {
       margin-left: 52px;
+      .size-sm(3);
+
+      .sm-block( {
+          text-align: center;
+        }
+
+      );
     }
 
     &:nth-child(3) {
       margin-left: 53px;
+      .size-sm(3);
+
+      .sm-block( {
+          text-align: center;
+          white-space: normal;
+        }
+
+      );
     }
 
     &:nth-child(2) {
       margin-left: 52px;
+      .size-sm(3);
+
+      .sm-block( {
+          text-align: center;
+        }
+
+      );
     }
 
     &:nth-child(1) {
       margin-left: -7px;
+      .size-sm(3);
+
+      .sm-block( {
+          text-align: center;
+        }
+
+      );
     }
 
     color: @colorText;
+
   }
+
+  .lg-block( {
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .size(12);
+    }
+
+  );
+
+  .sm(font-size, 16px);
+}
+
+.nav .nav__link {
+  .lg-block( {
+      margin: 0;
+    }
+
+  );
 }
 
 .intro__inner {
@@ -325,7 +426,7 @@ body {
 
 .form-request {
   position: relative;
-
+  display: flex;
   .size(6);
 
   &__button {
@@ -334,6 +435,7 @@ body {
 }
 
 .phone-input {
+  padding-left: 20px;
   width: 100%;
   height: 56px;
   border-radius: 5px;
@@ -380,7 +482,7 @@ body {
 
   &_question {
     max-width: 303px;
-  
+
     img {
       margin-top: -4px;
     }
@@ -406,25 +508,37 @@ body {
   background: #ffffff;
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .wrapper();
+    padding-top: 81px;
+  }
+
+  &__advantages-items {
+    margin-top: 48px;
   }
 
   .h2 {
-
     .size(8);
+    text-align: center;
   }
 
   .advantages-items {
-    .row-flex();
-
-    .size(12);
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-height: 330px;
   }
 
   .advantages-item {
+    padding-right: 20px;
     display: flex;
-    flex: 0 1 570px;
 
     .size(6);
+    height: 155px;
 
     box-shadow: 2px 2px 4px rgba(121, 97, 122, 0.35), -2px -2px 4px rgba(121, 97, 122, 0.35);
     border-radius: 3px;
@@ -432,10 +546,114 @@ body {
     img {
       max-width: none;
     }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__text {
+      margin-left: 78px;
+      display: inline-block;
+      line-height: 26px;
+
+      &_rules {
+        max-width: 342px;
+
+        &+.advantages-item__image {
+          padding-right: 9px;
+          padding-top: 7px;
+        }
+      }
+
+      &_adaptive {
+        max-width: 291px;
+
+        &+.advantages-item__image {
+          padding-right: 21px;
+        }
+      }
+
+      &_analize {
+        position: relative;
+        max-width: 343px;
+
+        &+.advantages-item__image {
+          margin-right: -5px;
+          padding-top: 4px;
+        }
+
+        &:after {
+          position: absolute;
+          top: 45px;
+          right: -15px;
+          content: "";
+          background-image: url(../images/sprite/spritesheet.png);
+          background-repeat: no-repeat;
+          display: block;
+          width: 34px;
+          height: 38px;
+          background-position: -5px -5px;
+        }
+      }
+
+      &_help {
+        max-width: 311px;
+
+        &+.advantages-item__image {
+          padding-right: 15px;
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+
+  .stripes {
+    box-sizing: border-box;
+    position: relative;
+    height: 155px;
+
+    &__stripe {
+      position: absolute;
+      display: inline-block;
+      width: 15px;
+      height: 155px;
+
+      &_gr {
+        top: 0;
+        bottom: 0;
+        background: #E0D8E4;
+      }
+
+      &_mgr {
+        top: 0;
+        left: 15px;
+        bottom: 0;
+        background: #F4EDF7;
+      }
+
+      &_lgr {
+        top: 0;
+        left: 30px;
+        bottom: 0;
+        background: #FDF8FF;
+      }
+    }
+  }
+
+  .advantages-container__button-modal {
+    margin-top: 52px;
   }
 
   .button-modal {
-
-    .size(4);
+    padding: 15px 89px;
+    font-family: "Raleway-SemiBold";
+    text-align: center;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background: @colorOrange;
+    border-radius: 4px;
   }
 }
