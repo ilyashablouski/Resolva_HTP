@@ -148,6 +148,7 @@ h2,
 .h2 {
   font-family: "Raleway-SemiBold";
   font-size: 46px;
+  .md(font-size, 36px);
 }
 
 body {
@@ -612,6 +613,8 @@ input.phone-input {
     align-items: center;
     .wrapper();
     padding-top: 81px;
+
+    .md(padding-top, 48px);
   }
 
   &__advantages-items {
@@ -635,15 +638,25 @@ input.phone-input {
   .advantages-item {
     padding-right: 20px;
     display: flex;
-
+    
     .size(6);
+
+    .md-block( {
+        .size(12);
+      }
+
+    );
+
     height: 155px;
 
-    box-shadow: 2px 2px 4px rgba(121, 97, 122, 0.35), -2px -2px 4px rgba(121, 97, 122, 0.35);
+    box-shadow: 2px 2px 4px rgba(121, 97, 122, 0.35),
+    -2px -2px 4px rgba(121, 97, 122, 0.35);
     border-radius: 3px;
 
     img {
       max-width: none;
+
+      .xs(width, 70px);
     }
 
     &__inner {
@@ -657,6 +670,26 @@ input.phone-input {
       margin-left: 78px;
       display: inline-block;
       line-height: 26px;
+
+      .lg(padding-right, 15px);
+      .md-block( {
+          max-width: none;
+          padding-right: 15px;
+        }
+
+      );
+
+      .xs-block( {
+          font-size: 16px;
+        }
+
+      );
+
+      @media screen and (max-width: 420px) {
+        margin-left: 55px;
+        font-size: 12px;
+        line-height: 20px;
+      }
 
       &_rules {
         max-width: 342px;
@@ -709,6 +742,10 @@ input.phone-input {
     }
   }
 
+  .advantages-item__inner .advantages-item__image {
+    .md(padding-right, 0);
+  }
+
   .stripes {
     box-sizing: border-box;
     position: relative;
@@ -754,5 +791,15 @@ input.phone-input {
     color: #FFFFFF;
     background: @colorOrange;
     border-radius: 4px;
+
+    @media screen and (max-width: 420px) {
+      padding: 10px 13px;
+    }
+
+    .xs-block( {
+        font-size: 16px;
+      }
+
+    );
   }
 }
