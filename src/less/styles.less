@@ -163,7 +163,7 @@ h4,
   line-height: 23px;
   color: @colorText;
   font-family: "Raleway-Bold";
-} 
+}
 
 body {
   margin: 0 auto;
@@ -926,7 +926,6 @@ input.phone-input {
 
 .addit-services-header__line {
   margin-right: 273px;
-  margin-left: 30px;
   width: 61px;
   border: none;
   background-color: #fff;
@@ -1047,6 +1046,7 @@ input.phone-input {
 
   &__stages-description {
     margin-top: 63px;
+    margin-left: 10px;
   }
 
   &__button-modal {
@@ -1063,11 +1063,88 @@ input.phone-input {
 
     .xs(margin-top, 46px);
   }
+}
 
-  .stages-description {
-    flex: 0 1 329px;
-    width: 100%;
+.stages-description {
+  display: flex;
+  justify-content: center;
+  flex: 0 1 329px;
+  width: 100%;
+}
+
+.stages-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-title {
+  position: absolute;
+  color: @colorText;
+  line-height: 23px;
+  text-align: center;
+}
+
+.stages-block:nth-child(1) {
+  margin-top: 109px;
+
+  .stage-title {
+    bottom: 23px;
+    left: -63px;
+    white-space: nowrap;
   }
+}
+
+.stages-block:nth-child(2) {
+  margin-top: 53px;
+
+  .stage-title {
+    top: -53px;
+  }
+
+}
+
+.stages-block:nth-child(3) {
+  margin-top: 102px;
+
+  .stage-title {
+    bottom: 0;
+    left: -66px;
+    white-space: nowrap;
+  }
+}
+
+.stages-block:nth-child(5) {
+  margin-top: 54px;
+
+  .stage-title {
+    top: -53px;
+    left: -81px;
+    white-space: nowrap;
+  }
+}
+
+.stages-block:nth-child(6) {
+  margin-top: 102px;
+
+  .stage-title {
+    bottom: 22px;
+    left: 47px;
+  }
+}
+
+.stages-block:nth-child(7) {
+  margin-top: 54px;
+
+  .stage-title {
+    top: -54px;
+    left: -33px;
+    white-space: nowrap;
+  }
+}
+
+.stages-block-line {
+  margin-top: 152px;
 }
 
 .rates-container {
@@ -1076,7 +1153,7 @@ input.phone-input {
   justify-content: space-between;
   min-height: 967px;
   background: linear-gradient(rgba(36, 27, 48, .6)),
-    url(../images/backgroung-rates.png) no-repeat;
+    url(../images/backgroung-rates.jpg) no-repeat;
   background-size: cover;
 
   &__content {
@@ -1201,6 +1278,9 @@ input.phone-input {
 .company-logo-block-items {
   .wrapper();
 
+  &__item {
+    margin-top: 11px;
+  }
 
   &__inner {
     display: flex;
@@ -1210,4 +1290,99 @@ input.phone-input {
     align-items: center;
     max-width: 1135px;
   }
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+}
+
+.footer-info {
+  width: 45.9027777778%;
+  background: #3F3A46;
+  color: #FFFFFF;
+
+  &__inner {
+    margin-left: auto;
+    margin-right: 64px;
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 457px;
+    min-height: 484px;
+  }
+
+  &__header {
+    width: 100%;
+    text-align: start;
+    color: #FFFFFF;
+  }
+
+  &__meta {
+    font-family: "OpenSans";
+    font-size: 14px;
+  }
+
+  &__button-modal {
+    margin-bottom: 6px;
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 331px;
+  }
+}
+
+.footer-map {
+  width: 54.0972222222%;
+}
+
+.footer-info-coordinate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 241px;
+  font-family: "OpenSans";
+
+  &__adress {
+    display: flex;
+  }
+
+  &__phone {
+    display: flex;
+  }
+
+  &__email {
+    display: flex;
+  }
+
+  &__adress-text {
+    margin-left: 16px;
+    line-height: 28px;
+  }
+
+  &__phone-text {
+    margin-left: 16px;
+    line-height: 29px;
+
+    a {
+      color: #FFFFFF;
+    }
+  }
+
+  &__email-text {
+    margin-top: -2px;
+    margin-left: 16px;
+  }
+
+}
+
+.footer-info-icon {
+  &_adress {
+    margin-top: 2px;
+  }
+
+  &_phone {
+    margin-top: 2px;
+  }
+
 }
