@@ -144,6 +144,7 @@ h2,
   font-size: 46px;
   .size(8);
   text-align: center;
+  color: @colorText;
 
   .md(font-size, 36px);
   .xs(font-size, 28px);
@@ -161,6 +162,7 @@ h4,
 .h4 {
   font-size: 20px;
   line-height: 23px;
+  width: 100%;
   color: @colorText;
   font-family: "Raleway-Bold";
 }
@@ -1354,6 +1356,16 @@ input.phone-input {
   }
 }
 
+.wrapper__rates-container {
+  @media screen and (max-width: 1100px) {
+    margin-top: 292px;
+  }
+
+  @media screen and (max-width: 420px) {
+    margin-top: 212px;
+  }
+}
+
 .rates-container {
   display: flex;
   flex-direction: column;
@@ -1373,12 +1385,17 @@ input.phone-input {
 
   &__rates-block-items {
     margin-top: 44px;
+
+    .sm-block( {
+        flex-wrap: wrap;
+      }
+
+    );
   }
 }
 
 .rates-container-header {
   margin: 0 auto;
-  .size(3);
   color: #ffffff;
 }
 
@@ -1388,6 +1405,12 @@ input.phone-input {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  .sm-block( {
+      justify-content: center;
+    }
+
+  );
 }
 
 .rates-block-item {
@@ -1398,6 +1421,47 @@ input.phone-input {
   max-width: 373px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(68, 68, 68, 0.25);
+
+  .size-sm(6);
+  .size-xs(8);
+
+  .lg-block( {
+      padding: 0 10px;
+    }
+
+  );
+
+  @media screen and (max-width: 420px) {
+    .size(12);
+  }
+
+  &_legal {}
+
+  &_dev {
+    margin: 0 20px;
+
+    .sm-block( {
+        margin-right: 0;
+      }
+
+    );
+
+    .xs-block( {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+
+    );
+  }
+
+  &_escort {
+    .sm-block( {
+        margin-top: 20px;
+        margin-bottom: 74px;
+      }
+
+    );
+  }
 
   .h4 {
     text-align: center;
@@ -1416,11 +1480,23 @@ input.phone-input {
   }
 
   &__line {
-    width: 30px;
+    width: 89.5442359249%;
     height: 1px;
     border: none;
     background-color: #B4B4B4;
     color: #B4B4B4;
+
+    &_legal {
+      margin-top: 23px;
+    }
+
+    &_dev {
+      margin-top: 23px;
+    }
+
+    &_escort {
+      margin-top: 11px;
+    }
   }
 
   &__text {
@@ -1429,12 +1505,25 @@ input.phone-input {
     text-align: center;
     color: @colorText;
 
+    .md-block( {
+        font-size: 16px
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 14px
+      }
+
+    );
+
     &_legal {
-      margin-top: 29px;
+      margin-top: 15px;
 
       span {
         display: inline-block;
         margin-bottom: 23px;
+        .md(margin-bottom, 15px);
 
         &:last-child {
           margin-bottom: 0;
@@ -1443,11 +1532,12 @@ input.phone-input {
     }
 
     &_dev {
-      margin-top: 28px;
+      margin-top: 15px;
 
       span {
         display: inline-block;
         margin-bottom: 23px;
+        .md(margin-bottom, 15px);
 
         &:last-child {
           margin-bottom: 0;
@@ -1456,11 +1546,12 @@ input.phone-input {
     }
 
     &_escort {
-      margin-top: 16px;
+      margin-top: 15px;
 
       span {
         display: inline-block;
         margin-bottom: 23px;
+        .md(margin-bottom, 15px);
 
         &:last-child {
           margin-bottom: 0;
@@ -1472,8 +1563,13 @@ input.phone-input {
   &__button-modal {
     margin-top: auto;
     margin-bottom: 18px;
-  }
+    padding: 15px 0;
+    width: 89.6%;
 
+    @media screen and (max-width: 420px) {
+      width: auto;
+    }
+  }
 }
 
 .company-logo-block {
@@ -1487,6 +1583,21 @@ input.phone-input {
 
   &__item {
     margin-top: 11px;
+    .col();
+    .size-md(4);
+    .size-xs(6);
+    .md(text-align, center);
+
+    &:nth-child(4) {
+      .md(text-align, end);
+      .xs(text-align, center);
+    }
+
+    &:nth-child(5) {
+      .md(text-align, start);
+      .xs(text-align, center);
+      .size-xs(12);
+    }
   }
 
   &__inner {
@@ -1496,6 +1607,12 @@ input.phone-input {
     justify-content: space-between;
     align-items: center;
     max-width: 1135px;
+
+    .lg-block( {
+        flex-wrap: wrap;
+      }
+
+    );
   }
 }
 
@@ -1541,7 +1658,7 @@ input.phone-input {
 }
 
 .footer-map {
-  width: 54.0972222222;
+  width: 54.0972222222%;
 }
 
 .footer-info-coordinate {
