@@ -1047,6 +1047,12 @@ input.phone-input {
   &__stages-description {
     margin-top: 63px;
     margin-left: 10px;
+
+    .lg-block( {
+        margin-left: 0;
+      }
+
+    );
   }
 
   &__button-modal {
@@ -1070,6 +1076,55 @@ input.phone-input {
   justify-content: center;
   flex: 0 1 329px;
   width: 100%;
+
+  @media screen and (max-width: 1100px) {
+    flex-wrap: wrap;
+  }
+
+  &__block-1 {
+    display: flex;
+
+    @media screen and (max-width: 1100px) {
+      flex: 1 1 51%;
+      justify-content: center;
+    }
+
+    .sm-block( {
+        padding: 0 15px;
+      }
+
+    );
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      padding: 0 25px;
+    }
+  }
+
+  &__block-2 {
+    display: flex;
+
+    @media screen and (max-width: 1100px) {
+      margin-top: 100px;
+      flex: 1 1 51%;
+      justify-content: center;
+    }
+
+    .sm-block( {
+        padding: 0 15px;
+      }
+
+    );
+
+    .xs-block( {
+        margin-top: 130px;
+      }
+
+    );
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      padding: 0 25px;
+    }
+  }
 }
 
 .stages-block {
@@ -1083,20 +1138,66 @@ input.phone-input {
   color: @colorText;
   line-height: 23px;
   text-align: center;
+
+  .sm-block( {
+      font-size: 14px;
+    }
+
+  );
 }
 
-.stages-block:nth-child(1) {
+.stages-description .stages-block .stage-title {
+  .xs-block( {
+      font-size: 12px;
+      white-space: normal;
+      line-height: 17px;
+    }
+
+  );
+}
+
+.stages-block_1:nth-child(1) {
   margin-top: 109px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 23%;
+  }
 
   .stage-title {
     bottom: 23px;
     left: -63px;
     white-space: nowrap;
+
+    @media screen and (max-width: 1100px) {
+      bottom: -44px;
+    }
+
+    .sm-block( {
+        left: -32px;
+      }
+
+    );
+
+    .xs-block( {
+        left: 0%;
+        bottom: -48px;
+      }
+
+    );
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      left: -39%;
+      right: -35%;
+    }
   }
 }
 
-.stages-block:nth-child(2) {
+.stages-block_1:nth-child(2) {
   margin-top: 53px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 11%;
+  }
 
   .stage-title {
     top: -53px;
@@ -1104,47 +1205,153 @@ input.phone-input {
 
 }
 
-.stages-block:nth-child(3) {
+.stages-block_1:nth-child(3) {
   margin-top: 102px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 21.5%;
+  }
 
   .stage-title {
     bottom: 0;
     left: -66px;
     white-space: nowrap;
+
+    @media screen and (max-width: 1100px) {
+      bottom: -67px;
+    }
+
+    .sm-block( {
+        left: -30px;
+      }
+
+    );
+
+    .xs-block( {
+        right: -32%;
+        bottom: -49px;
+      }
+
+    );
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      bottom: 0;
+      top: 100%;
+      right: -48%;
+    }
   }
 }
 
-.stages-block:nth-child(5) {
+.stages-block_2:nth-child(1) {
   margin-top: 54px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 12.2%;
+  }
+
 
   .stage-title {
     top: -53px;
     left: -81px;
     white-space: nowrap;
+
+    .sm-block( {
+        left: -40px;
+      }
+
+    );
+
+    .xs-block( {
+        left: 0px;
+        top: -74px;
+      }
+
+    );
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      top: -85px;
+      left: -30%;
+      right: -28%;
+    }
   }
 }
 
-.stages-block:nth-child(6) {
+.stages-block_2:nth-child(2) {
   margin-top: 102px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 22.3%;
+  }
 
   .stage-title {
     bottom: 22px;
     left: 47px;
+
+    @media screen and (max-width: 1100px) {
+      bottom: -44px;
+    }
+
+    .sm-block( {
+        left: 73px;
+      }
+
+    );
+
+    .xs-block( {
+        left: 80px;
+        bottom: -32px;
+      }
+
+    );
+
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      top: 96%;
+      left: 14%;
+      right: 13%;
+    }
   }
 }
 
-.stages-block:nth-child(7) {
+.stages-block_2:nth-child(3) {
   margin-top: 54px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 12.2%;
+  }
 
   .stage-title {
     top: -54px;
     left: -33px;
     white-space: nowrap;
+
+    .sm-block( {
+        left: -6px;
+      }
+
+    );
+
+    .xs-block( {
+        left: 0;
+        top: -39px;
+      }
+
+    );
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      left: -40%;
+      top: -51px;
+      right: -41%;
+    }
   }
 }
 
 .stages-block-line {
   margin-top: 152px;
+
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
 }
 
 .rates-container {
