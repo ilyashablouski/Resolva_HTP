@@ -999,6 +999,7 @@ input.phone-input {
       padding-left: 30px;
       flex-direction: row;
       max-width: 1200px;
+      justify-content: space-around;
     }
 
   );
@@ -1435,8 +1436,6 @@ input.phone-input {
     .size(12);
   }
 
-  &_legal {}
-
   &_dev {
     margin: 0 20px;
 
@@ -1619,12 +1618,44 @@ input.phone-input {
 .footer {
   display: flex;
   width: 100%;
+
+  .md-block( {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  );
+
+  &__footer-info {
+    .md-block( {
+        padding-bottom: 20px;
+      }
+
+    );
+  }
 }
 
 .footer-info {
   width: 45.9027777778%;
   background: #3F3A46;
   color: #FFFFFF;
+
+  .md-block( {
+      width: 100%;
+      order: 2;
+    }
+
+  );
+
+  &__footer-info-coordinate {
+
+    .md-block( {
+        padding: 20px 0;
+      }
+
+    );
+
+  }
 
   &__inner {
     margin-left: auto;
@@ -1635,30 +1666,70 @@ input.phone-input {
     flex-direction: column;
     justify-content: space-between;
     max-width: 457px;
-    min-height: 484px;
+
+    .lg-block( {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+
+    );
+
+    .md-block( {
+        margin-top: 68px;
+        padding: 0 15px;
+        align-items: center;
+        max-width: none;
+      }
+
+    );
   }
 
   &__header {
     width: 100%;
     text-align: start;
     color: #FFFFFF;
+
+    .lg(font-size, 40px);
+
+    .md-block( {
+        text-align: center;
+      }
+
+    );
   }
 
   &__meta {
+    margin-top: 36px;
+    margin-left: 2px;
     font-family: "OpenSans";
     font-size: 14px;
+
+    .lg(font-size, 12px);
   }
 
   &__button-modal {
+    margin-top: 36px;
     margin-bottom: 6px;
     padding-right: 0;
     padding-left: 0;
     max-width: 331px;
+
+    .lg(margin-top, 20px);
+    .md(padding, 15px 89px);
   }
 }
 
 .footer-map {
   width: 54.0972222222%;
+
+  .md-block( {
+      order: 1;
+      width: 100%;
+      text-align: center;
+    }
+
+  );
 }
 
 .footer-info-coordinate {
@@ -1668,16 +1739,58 @@ input.phone-input {
   min-height: 241px;
   font-family: "OpenSans";
 
+  .lg(font-size, 16px);
+  .lg(justify-content, start);
+
+  .md-block( {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-items: baseline;
+      width: 100%;
+      min-height: auto;
+    }
+
+  );
+  
+
   &__adress {
+    margin-top: 38px;
     display: flex;
+
+    .lg(margin-top, 20px);
+
+    .md-block( {
+        padding: 0 10px;
+      }
+
+    );
   }
 
   &__phone {
+    margin-top: 32px;
     display: flex;
+
+    .lg(margin-top, 20px);
+
+    .md-block( {
+        padding: 0 10px;
+      }
+
+    );
   }
 
   &__email {
+    margin-top: 37px;
     display: flex;
+
+    .lg(margin-top, 20px);
+
+    .md-block( {
+        padding: 0 10px;
+      }
+
+    );
   }
 
   &__adress-text {
