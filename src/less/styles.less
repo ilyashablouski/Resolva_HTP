@@ -1859,11 +1859,19 @@ input.phone-input {
   &__modal-window {
     margin-right: 30px;
     margin-left: 30px;
+    padding: 0 92px;
 
     @media screen and (max-width: 420px) {
       margin-right: 15px;
       margin-left: 15px;
     }
+
+    .xs-block( {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+    );
   }
 }
 
@@ -1885,19 +1893,17 @@ input.phone-input {
   }
 
   &__inner {
-    padding-left: 79px;
-    padding-right: 101px;
-    width: 81%;
+    position: relative;
+    width: 100%;
 
     .sm-block( {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-left: 15px;
-        padding-right: 15px;
       }
 
     );
+
   }
 
   &__header {
@@ -2004,4 +2010,39 @@ input.phone-input {
     font-family: "Raleway-SemiBold";
     font-size: 20px;
   }
+}
+
+.close-button {
+  position: absolute;
+  right: -65px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+
+  .xs-block({
+    right: -20px;
+  });
+}
+
+.close-button:hover {
+  opacity: 1;
+}
+
+.close-button:before,
+.close-button:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #505050;
+}
+
+.close-button:before {
+  transform: rotate(45deg);
+}
+
+.close-button:after {
+  transform: rotate(-45deg);
 }
