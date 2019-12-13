@@ -106,7 +106,7 @@
 
       <form action="#" method="POST" class="form-request intro__form-request">
         <input type="tel" class="phone-input" name="tel" placeholder="Телефон" required />
-        <button type="submit" class="button form-request__button">
+        <button type="submit" class="button form-request__button" name="form-request-submit">
           Оставить заявку
         </button>
       </form>
@@ -490,9 +490,24 @@
 
 
     <section class="footer-map">
-        <img src="images/map.jpg" alt="Map">
+      <img src="images/map.jpg" alt="Map">
     </section>
   </footer>
+
+  <div class="modal-container">
+    <div class="modal-window modal-container__modal-window">
+      <div class="modal-window__inner">
+        <span class="modal-window__header">Оставьте заявку на получение прайса</span>
+        <form action="#" method="POST" class="modal-form">
+          <input type="text" class="modal-form__name-input" placeholder="Имя" required>
+          <input type="tel" class="modal-form__phone-input" placeholder="Телефон" required>
+          <textarea id="" cols="30" rows="10" class="modal-form__comments-input" name="modal-comments"
+            placeholder="Комментарий"></textarea>
+          <button type="submit" class="button modal-form__button" name="modal-form-submit">Получить</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!--Import jQuery-->
   <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
