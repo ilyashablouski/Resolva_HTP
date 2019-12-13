@@ -19,7 +19,7 @@ const config = {
   },
   js: {
     dev: 'js/dev/**/*.js',
-    src: 'js/dev/+(common).js',
+    src: 'js/+(common).js',
     prod: 'js/prod/',
   },
 };

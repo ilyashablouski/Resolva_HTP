@@ -1585,8 +1585,8 @@ input.phone-input {
 
 .company-logo-block {
   width: 100%;
-  background: #FBFBFB;
-  opacity: 0.8;
+  color: rgb(123, 120, 120);
+  opacity: 0.7;
 }
 
 .company-logo-block-items {
@@ -1873,6 +1873,10 @@ input.phone-input {
 
     );
   }
+
+  &_close {
+    display: none;
+  }
 }
 
 .modal-window {
@@ -2020,9 +2024,11 @@ input.phone-input {
   height: 32px;
   opacity: 0.5;
 
-  .xs-block({
-    right: -20px;
-  });
+  .xs-block( {
+      right: -20px;
+    }
+
+  );
 }
 
 .close-button:hover {
