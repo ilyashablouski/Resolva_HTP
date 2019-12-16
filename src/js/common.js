@@ -37,9 +37,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
   // Close modal window
   closeModalButton.addEventListener('click', closeModal);
 });
+
 // Call toogle event
 $(document).ready(function() {
   $('.addit-services-header').on('click', toogleTextNode);
