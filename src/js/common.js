@@ -18,7 +18,7 @@ function showModal() {
 }
 
 function closeModal() {
-  modalNode.remove('modal-container_close');
+  modalNode.classList.add('modal-container_close');
 }
 
 // Скрытие и появление DOM - узлов при изменении размера окна просмотра
