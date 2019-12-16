@@ -12,17 +12,28 @@ function toogleTextNode() {
 
 function showModal() {
   modalNode.classList.toggle('modal-container_close');
-
-
-  // document.querySelector('.modal-container')
-  //     .classList.add('zoomIn');
+  animateCSS('.modal-container', 'zoomIn');
 }
 
 function closeModal() {
-  modalNode.classList.add('modal-container_close');
+  animateCSS('.modal-container', 'zoomOut', () => {
+    modalNode.classList.toggle('modal-container_close');
+  });
+}
 
-  // document.querySelector('.modal-container')
-  //     .classList.remove('zoomIn');
+// Animations from animate.css
+function animateCSS(element, animationName, callback) {
+  const node = document.querySelector(element);
+  node.classList.add('animated', animationName);
+
+  function handleAnimationEnd() {
+    node.classList.remove('animated', animationName);
+    node.removeEventListener('animationend', handleAnimationEnd);
+
+    if (typeof callback === 'function') callback();
+  }
+
+  node.addEventListener('animationend', handleAnimationEnd);
 }
 
 // Applying events after loading the DOM

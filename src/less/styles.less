@@ -2111,20 +2111,56 @@ input.phone-input {
   animation-name: zoomIn;
 }
 
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}
 
 .animated {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 
-  -webkit-animation-duration: .4s;
-  -o-animation-duration: .4s;
-  -moz-animation-duration: .4s;
-  animation-duration: .4s;
+  -webkit-animation-duration: .5s;
+  -o-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  animation-duration: .5s;
 
-  -webkit-animation-delay: .15s;
-  -o-animation-delay: .15s;
-  -moz-animation-delay: .15s;
-  animation-delay: .15s;
+  -webkit-animation-delay: .1s;
+  -o-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  animation-delay: .1s;
 }
 
 @media (print),
