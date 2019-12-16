@@ -1,66 +1,33 @@
 /* eslint-disable require-jsdoc */
-// Выбираем DOM - узлы
-const toogleElements = document.querySelectorAll('.addit-services-text');
-const mainToogleNode = document.querySelector('.addit-services-block');
+// Choose DOM - nodes
 const mainModalNode = document.body;
 const modalNode = document.querySelector('.modal-container');
 const closeModalButton = document.querySelector('.close-button');
 
-// Объявление обработчиков событий
-function toogleTextNodes(clickNode) {
-  // Условие выполнения обработчика и присваивания/удаления классов
-  if (window.matchMedia('(max-width: 1100px)').matches) {
-    clickNode.closest('.addit-services-header').nextElementSibling
-        .classList.toggle('addit-services-text_close');
+function toogleTextNode() {
+  if ($(window).width() <= 1100) {
+    $(this).next().slideToggle(300);
   }
 }
 
 function showModal() {
   document.querySelector('.modal-container').
       classList.toggle('modal-container_close');
+
+  document.querySelector('.modal-container')
+      .classList.add('zoomIn');
 }
 
 function closeModal() {
   modalNode.classList.add('modal-container_close');
+
+  document.querySelector('.modal-container')
+      .classList.remove('zoomIn');
 }
 
-// Скрытие и появление DOM - узлов при изменении размера окна просмотра
-// браузера <= 1100px и > 1100px
-window.addEventListener('resize', () => {
-  if (window.matchMedia('(max-width: 1100px)').matches) {
-    for (const toogleElement of toogleElements) {
-      toogleElement.classList.add('addit-services-text_close');
-    }
-  } else {
-    for (const toogleElement of toogleElements) {
-      toogleElement.classList.remove('addit-services-text_close');
-    }
-  }
-});
-
-// Применение событий после загрузки DOM
+// Applying events after loading the DOM
 window.addEventListener('DOMContentLoaded', () => {
-  if (window.matchMedia('(max-width: 1100px)').matches) {
-    for (const toogleElement of toogleElements) {
-      toogleElement.classList.add('addit-services-text_close');
-    }
-  }
-
-  if (window.matchMedia('(max-width: 1400px)').matches) {
-    // Диллегирование и вызов события кликов мышью на переключатели
-    mainToogleNode.addEventListener('click', (event) => {
-      const target = event.target;
-      if ((target.parentElement.className == 'addit-services-main') ||
-        (target.parentElement.className == 'addit-services-header') ||
-        (target.parentElement.className == 'addit-services-header__inner')) {
-        toogleTextNodes(target);
-      } else {
-        return;
-      }
-    });
-  }
-
-  // Диллегирование и вызов события кликов мышью для показа модального окна
+  // Dilocation and call events
   mainModalNode.addEventListener('click', (event) => {
     const target = event.target;
     if (target.classList.contains('button-modal')) {
@@ -70,6 +37,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Закрытие модального окна
+  // Close modal window
   closeModalButton.addEventListener('click', closeModal);
+});
+// Call toogle event
+$(document).ready(function() {
+  $('.addit-services-header').on('click', toogleTextNode);
 });
