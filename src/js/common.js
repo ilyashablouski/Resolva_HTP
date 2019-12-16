@@ -11,18 +11,18 @@ function toogleTextNode() {
 }
 
 function showModal() {
-  document.querySelector('.modal-container').
-      classList.toggle('modal-container_close');
+  modalNode.classList.toggle('modal-container_close');
 
-  document.querySelector('.modal-container')
-      .classList.add('zoomIn');
+
+  // document.querySelector('.modal-container')
+  //     .classList.add('zoomIn');
 }
 
 function closeModal() {
   modalNode.classList.add('modal-container_close');
 
-  document.querySelector('.modal-container')
-      .classList.remove('zoomIn');
+  // document.querySelector('.modal-container')
+  //     .classList.remove('zoomIn');
 }
 
 // Applying events after loading the DOM
