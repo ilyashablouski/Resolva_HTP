@@ -8,8 +8,11 @@ const closeModalButton = document.querySelector('.close-button');
 
 // Объявление обработчиков событий
 function toogleTextNodes(clickNode) {
-  clickNode.closest('.addit-services-header').nextElementSibling
-      .classList.toggle('addit-services-text_close');
+  // Условие выполнения обработчика и присваивания/удаления классов
+  if (window.matchMedia('(max-width: 1100px)').matches) {
+    clickNode.closest('.addit-services-header').nextElementSibling
+        .classList.toggle('addit-services-text_close');
+  }
 }
 
 function showModal() {
@@ -22,7 +25,7 @@ function closeModal() {
 }
 
 // Скрытие и появление DOM - узлов при изменении размера окна просмотра
-// браузера <= 992px и > 992px
+// браузера <= 1100px и > 1100px
 window.addEventListener('resize', () => {
   if (window.matchMedia('(max-width: 1100px)').matches) {
     for (const toogleElement of toogleElements) {
@@ -41,7 +44,9 @@ window.addEventListener('DOMContentLoaded', () => {
     for (const toogleElement of toogleElements) {
       toogleElement.classList.add('addit-services-text_close');
     }
+  }
 
+  if (window.matchMedia('(max-width: 1400px)').matches) {
     // Диллегирование и вызов события кликов мышью на переключатели
     mainToogleNode.addEventListener('click', (event) => {
       const target = event.target;
