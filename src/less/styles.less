@@ -1446,6 +1446,7 @@ input.phone-input {
   background-size: cover;
 
   .ie11({
+    position: relative;
     background: url(../images/backgroung-ratesIE.jpg) no-repeat;
   });
 
@@ -1655,6 +1656,12 @@ input.phone-input {
   width: 100%;
   background: #FBFBFB;
   opacity: 0.9;
+
+  
+  .ie11({
+    position: absolute;
+    bottom: 0;
+  });
 }
 
 .company-logo-block-items {
@@ -1685,6 +1692,10 @@ input.phone-input {
     min-height: 256px;
     justify-content: space-between;
     align-items: center;
+
+    .ie11({
+      height: 256px;
+    });
 
     .lg-block( {
         flex-wrap: wrap;
@@ -1766,7 +1777,7 @@ input.phone-input {
 
   &__header {
     width: 100%;
-    text-align: start;
+    text-align: left;
     color: #FFFFFF;
 
     .lg(font-size, 40px);
