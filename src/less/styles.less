@@ -620,6 +620,13 @@ input.phone-input {
   &__advantages-items {
     margin-top: 48px;
   }
+
+  &__advantages-item {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .advantages-items {
@@ -631,10 +638,15 @@ input.phone-input {
   flex: 0 1 330px;
   max-width: 100%;
 }
+.advantages-item:hover {
+  box-shadow: 2px 2px 4px rgba(121, 97, 122, 0.35),
+  -2px -2px 4px rgba(121, 97, 122, 0.35);
+}
 
 .advantages-item {
   padding-right: 20px;
   display: flex;
+  transition: box-shadow .125s;
 
   .size(6);
 
@@ -645,9 +657,7 @@ input.phone-input {
   );
 
   height: 155px;
-
-  box-shadow: 2px 2px 4px rgba(121, 97, 122, 0.35),
-  -2px -2px 4px rgba(121, 97, 122, 0.35);
+  border: 1px solid #C4AAD8;
   border-radius: 3px;
 
   img {
@@ -734,17 +744,6 @@ input.phone-input {
   }
 }
 
-
-.advantages-item__icon-arrow {
-  position: absolute;
-  top: 45px;
-  right: -15px;
-  bottom: 0;
-  display: inline-block;
-  width: 34px;
-  height: 38px;
-  background: url("data:image/svg+xml,%3Csvg width='34' height='38' viewBox='0 0 34 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d)'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M25.3807 15.1346L5.29669 9.0827C5.1052 9.025 4.89827 9.08896 4.77135 9.24353C4.64444 9.39811 4.62377 9.61459 4.71825 9.79056L15.0085 28.9569C15.1071 29.1407 15.3114 29.2431 15.518 29.2119C15.7242 29.182 15.889 29.0228 15.9295 28.8182L17.126 22.6977L22.1485 26.4815C22.3068 26.6008 22.515 26.6102 22.6796 26.5218C22.7371 26.4909 22.7894 26.4483 22.8321 26.3939L25.1797 23.4501C25.2629 23.3459 25.3011 23.2121 25.284 23.0798C25.2668 22.9476 25.1979 22.8275 25.0907 22.747L20.0538 18.953L25.4718 16.0442C25.6477 15.9497 25.7501 15.7578 25.7297 15.5589C25.7102 15.3595 25.5726 15.1931 25.3807 15.1346Z' fill='%234E4E4E'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d' x='-3' y='0' width='40.1344' height='40.1344' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat;
-}
 
 .advantages-item__inner .advantages-item__image {
   .md(padding-right, 0);
