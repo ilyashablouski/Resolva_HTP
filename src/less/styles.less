@@ -627,6 +627,7 @@ input.phone-input {
 
   &__advantages-item {
     margin-bottom: 10px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -642,9 +643,10 @@ input.phone-input {
   flex: 0 1 330px;
   max-width: 100%;
 }
+
 .advantages-item:hover {
   box-shadow: 2px 2px 4px rgba(121, 97, 122, 0.35),
-  -2px -2px 4px rgba(121, 97, 122, 0.35);
+    -2px -2px 4px rgba(121, 97, 122, 0.35);
 }
 
 .advantages-item {
@@ -1040,14 +1042,14 @@ input.phone-input {
   );
 
   .ie11( {
-    top: 0%;
-    bottom: 0%;
-    left: 393px;
-    right: 0%;
-    margin: auto;
-  }
+      top: 0%;
+      bottom: 0%;
+      left: 393px;
+      right: 0%;
+      margin: auto;
+    }
 
-);
+  );
 }
 
 .addit-services-list {
@@ -1448,17 +1450,21 @@ input.phone-input {
     url(../images/backgroung-rates.jpg) no-repeat;
   background-size: cover;
 
-  .ie11({
-    position: relative;
-    background: url(../images/backgroung-ratesIE.jpg) no-repeat;
-  });
+  .ie11( {
+      position: relative;
+      background: url(../images/backgroung-ratesIE.jpg) no-repeat;
+    }
+
+  );
 
   &__content {
     padding-top: 74px;
 
-    .ie11({
-      width: 100%;
-    });
+    .ie11( {
+        width: 100%;
+      }
+
+    );
 
     .wrapper();
     display: flex;
@@ -1660,11 +1666,13 @@ input.phone-input {
   background: #FBFBFB;
   opacity: 0.9;
 
-  
-  .ie11({
-    position: absolute;
-    bottom: 0;
-  });
+
+  .ie11( {
+      position: absolute;
+      bottom: 0;
+    }
+
+  );
 }
 
 .company-logo-block-items {
@@ -1696,9 +1704,11 @@ input.phone-input {
     justify-content: space-between;
     align-items: center;
 
-    .ie11({
-      height: 256px;
-    });
+    .ie11( {
+        height: 256px;
+      }
+
+    );
 
     .lg-block( {
         flex-wrap: wrap;
@@ -1725,6 +1735,22 @@ input.phone-input {
       }
 
     );
+  }
+}
+
+.footer-info-coordinate__inner {
+  .md-block( {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+  );
+
+  @media screen and (max-width: 454px) {
+    max-width: 261px;
+    justify-content: start;
   }
 }
 
