@@ -38,23 +38,6 @@
     content="Поможем с решением бухгалтерских, юридических и кадровых вопросов для ИП и организаций. Аутсорсинг услуг и аутстаффинг специалистов для бизнеса любого масштаба.">
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!--[if lt IE 9]>
-      <script>
-        document.createElement("header");
-        document.createElement("footer");
-        document.createElement("section");
-        document.createElement("aside");
-        document.createElement("nav");
-        document.createElement("article");
-      </script>
-      <noscript>
-        <strong>Внимание!</strong>
-        Поскольку ваш браузер не поддерживает HTML5, некоторые элементы
-        воспроизводятся с помощью JScript. Однако в вашем браузере скрипты
-        отключены, пожалуйста, включите их, чтобы браузер смог отобразить данную
-        страницу.
-      </noscript>
-    <![endif]-->
 </head>
 
 <body class="wrapper">
@@ -133,8 +116,8 @@
         Вступить в&nbsp;Парк высоких технологий (ПВТ)
       </h1>
 
-      <form action="#" method="POST" class="form-request intro__form-request">
-        <input type="tel" class="phone-input" name="tel" placeholder="Телефон" required />
+      <form action="sendmail.php" method="POST" class="form-request intro__form-request">
+        <input type="tel" class="phone-input" name="phone" placeholder="Телефон" required />
         <button type="submit" class="button form-request__button" name="form-request-submit">
           Оставить заявку
         </button>
@@ -543,10 +526,10 @@
     <div class="modal-window modal-container__modal-window">
       <div class="modal-window__inner">
         <span class="modal-window__header">Оставьте заявку на&nbsp;получение прайса</span>
-        <form action="#" method="POST" class="modal-form">
-          <input type="text" class="modal-form__name-input" placeholder="Имя" required>
-          <input type="tel" class="modal-form__phone-input" placeholder="Телефон" required>
-          <textarea id="" cols="30" rows="10" class="modal-form__comments-input" name="modal-comments"
+        <form action="sendmail.php" method="POST" class="modal-form">
+          <input type="text" class="modal-form__name-input" name="name" placeholder="Имя" required>
+          <input type="tel" class="modal-form__phone-input" name="phone" placeholder="Телефон" required>
+          <textarea id="" cols="30" rows="10" class="modal-form__comments-input" name="message"
             placeholder="Комментарий"></textarea>
           <button type="submit" class="button modal-form__button" name="modal-form-submit">Получить</button>
         </form>
