@@ -89,7 +89,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%; 
+  min-height: 100%;
 }
 
 .wrapper__inner {
@@ -395,6 +395,19 @@ body {
 
   );
 
+  .lg-block( {
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .size(12);
+    }
+
+  );
+
+  @media screen and (max-width: 420px) {
+    width: auto;
+  }
+
   &__link {
     .xs-block( {
         margin-bottom: 12px !important;
@@ -405,7 +418,6 @@ body {
 
     &:nth-child(6) {
       margin-left: 52px;
-      // .size-sm(6);
 
       .sm-block( {
           text-align: center;
@@ -416,12 +428,6 @@ body {
 
     &:nth-child(5) {
       margin-left: 52px;
-      // .size-sm(6);
-
-      // @media screen and (max-width: 420px) {
-      //   .size(4);
-      //   white-space: normal;
-      // }
 
       .sm-block( {
           text-align: center;
@@ -432,11 +438,6 @@ body {
 
     &:nth-child(4) {
       margin-left: 52px;
-      // .size-sm(3);
-
-      @media screen and (max-width: 360px) {
-        padding-top: 10px;
-      }
 
       .sm-block( {
           text-align: center;
@@ -447,14 +448,6 @@ body {
 
     &:nth-child(3) {
       margin-left: 53px;
-      // .size-sm(3);
-
-      // @media screen and (max-width: 420px) {
-      //   .size(12);
-      //   margin-top: 15px;
-      //   margin-bottom: 10px;
-      //   flex-grow: 1;
-      // }
 
       .sm-block( {
           text-align: center;
@@ -466,11 +459,6 @@ body {
 
     &:nth-child(2) {
       margin-left: 52px;
-      // .size-sm(3);
-
-      // @media screen and (max-width: 420px) {
-      //   .size(6);
-      // }
 
       .sm-block( {
           text-align: center;
@@ -481,11 +469,6 @@ body {
 
     &:nth-child(1) {
       margin-left: -7px;
-      // .size-sm(3);
-
-      // @media screen and (max-width: 420px) {
-      //   .size(6);
-      // }
 
       .sm-block( {
           text-align: center;
@@ -496,12 +479,6 @@ body {
 
     color: @colorText;
   }
-
-  .lg-block( {
-      margin: 0 auto; flex-wrap: wrap; justify-content: space-between; .size(12);
-    }
-
-  );
 }
 
 .nav .nav__link {
