@@ -21,6 +21,7 @@ function toogleTextNode() {
   Show modal node's definition
  */
 function showModal() {
+  event.preventDefault();
   document.body.classList.toggle('overflow-hidden');
   modalNode.classList.toggle('modal-container_close');
   animateCSS('.modal-container', 'zoomIn');
@@ -30,6 +31,7 @@ function showModal() {
   Close modal node's definition
  */
 function closeModal() {
+  event.preventDefault();
   document.body.classList.toggle('overflow-hidden');
   animateCSS('.modal-container', 'zoomOut', () => {
     modalNode.classList.toggle('modal-container_close');
@@ -61,7 +63,6 @@ window.addEventListener('DOMContentLoaded', () => {
   Dilocation and call events
  */
   mainModalNode.addEventListener('click', (event) => {
-    event.preventDefault();
     const target = event.target;
     if (target.classList.contains('button-modal')) {
       showModal();
