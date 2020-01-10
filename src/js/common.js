@@ -1,27 +1,44 @@
 /* eslint-disable require-jsdoc */
-// Choose DOM - nodes
+/* eslint-disable valid-jsdoc */
+/**
+Choose DOM - nodes
+ */
+
 const mainModalNode = document.body;
 const modalNode = document.querySelector('.modal-container');
 const closeModalButton = document.querySelector('.close-button');
 
+/**
+  Toogle node's definition
+ */
 function toogleTextNode() {
   if ($(window).width() <= 1100) {
     $(this).next().slideToggle(300);
   }
 }
 
+/**
+  Show modal node's definition
+ */
 function showModal() {
+  document.body.classList.toggle('overflow-hidden');
   modalNode.classList.toggle('modal-container_close');
   animateCSS('.modal-container', 'zoomIn');
 }
 
+/**
+  Close modal node's definition
+ */
 function closeModal() {
+  document.body.classList.toggle('overflow-hidden');
   animateCSS('.modal-container', 'zoomOut', () => {
     modalNode.classList.toggle('modal-container_close');
   });
 }
 
-// Animations from animate.css
+/**
+  Animations from animate.css
+ */
 function animateCSS(element, animationName, callback) {
   const node = document.querySelector(element);
   node.classList.add('animated', animationName);
@@ -36,10 +53,15 @@ function animateCSS(element, animationName, callback) {
   node.addEventListener('animationend', handleAnimationEnd);
 }
 
-// Applying events after loading the DOM
+/**
+  Applying events after loading the DOM
+ */
 window.addEventListener('DOMContentLoaded', () => {
-  // Dilocation and call events
+  /**
+  Dilocation and call events
+ */
   mainModalNode.addEventListener('click', (event) => {
+    event.preventDefault();
     const target = event.target;
     if (target.classList.contains('button-modal')) {
       showModal();
@@ -48,12 +70,15 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
-  // Close modal window
+  /**
+  Close modal window
+ */
   closeModalButton.addEventListener('click', closeModal);
 });
 
-// Call toogle event
+/**
+  Call toogle event
+ */
 $(document).ready(function() {
   $('.addit-services-header').on('click', toogleTextNode);
 });
