@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 const gulp = require('gulp');
 const less = require('gulp-less');
-// const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
 // const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const gcmq = require('gulp-group-css-media-queries');
@@ -28,9 +28,9 @@ gulp.task('build', function(done) {
   gulp.src(config.root + config.css.src)
       .pipe(less())
       .pipe(gcmq())
-      // .pipe(autoprefixer({
-      //   browsers: ['last 4 versions'],
-      // }))
+      .pipe(autoprefixer({
+        browsers: ['last 4 versions'],
+      }))
       // .pipe(cleanCSS({
       //   level: 2,
       // }))
