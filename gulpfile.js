@@ -1,8 +1,8 @@
 /* eslint-disable linebreak-style */
 const gulp = require('gulp');
 const less = require('gulp-less');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
+// const autoprefixer = require('gulp-autoprefixer');
+// const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const gcmq = require('gulp-group-css-media-queries');
 const smartgrid = require('smart-grid');
@@ -28,13 +28,12 @@ gulp.task('build', function(done) {
   gulp.src(config.root + config.css.src)
       .pipe(less())
       .pipe(gcmq())
-      .pipe(autoprefixer({
-        browsers: ['> 0.1%'],
-        cascade: false,
-      }))
-      .pipe(cleanCSS({
-        level: 2,
-      }))
+      // .pipe(autoprefixer({
+      //   browsers: ['last 4 versions'],
+      // }))
+      // .pipe(cleanCSS({
+      //   level: 2,
+      // }))
       .pipe(gulp.dest(config.root + config.css.dest))
       .pipe(browserSync.reload({
         stream: true,
