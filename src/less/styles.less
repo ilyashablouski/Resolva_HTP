@@ -1514,6 +1514,7 @@ input.phone-input {
 
   &__content {
     padding-top: 74px;
+    // width: 100%;
 
     .wrapper();
   }
@@ -1541,7 +1542,6 @@ input.phone-input {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 100%;
 
   .sm-block( {
       justify-content: center;
@@ -1810,7 +1810,7 @@ input.phone-input {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-evenly;
+      justify-content: center;
     }
 
   );
@@ -1891,12 +1891,17 @@ input.phone-input {
     font-family: "OpenSans";
     font-size: 14px;
 
-    .lg-block( {
-        font-size: 12px;
+    .md-block( {
         text-align: center;
+        margin-left: 0px;
       }
 
     );
+    .xs-block( {
+      font-size: 12px
+    }
+
+  );
   }
 
   &__button-modal {
@@ -1940,7 +1945,7 @@ input.phone-input {
 
   .md-block( {
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: center;
       flex-wrap: wrap;
       align-items: baseline;
       width: 100%;
