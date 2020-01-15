@@ -2,7 +2,7 @@
 const gulp = require('gulp');
 const less = require('gulp-less');
 // const autoprefixer = require('gulp-autoprefixer');
-// const cleanCSS = require('gulp-clean-css');
+const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const gcmq = require('gulp-group-css-media-queries');
 const smartgrid = require('smart-grid');
@@ -31,9 +31,9 @@ gulp.task('build', function(done) {
       // .pipe(autoprefixer({
       //   browsers: ['last 4 versions'],
       // }))
-      // .pipe(cleanCSS({
-      //   level: 2,
-      // }))
+      .pipe(cleanCSS({
+        level: 2,
+      }))
       .pipe(gulp.dest(config.root + config.css.dest))
       .pipe(browserSync.reload({
         stream: true,

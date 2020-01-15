@@ -77,7 +77,7 @@
 
 html {
   scroll-behavior: smooth;
-  width: 98.93vw;
+  width: 100%;
 }
 
 html,
@@ -118,6 +118,11 @@ button,
   &:hover {
     background: #9E6BB0;
   }
+}
+
+.button-modal {
+  display: block;
+  width: 334.57px;
 }
 
 button,
@@ -234,7 +239,8 @@ body {
     max-width: 511px;
 
     .md-block( {
-        margin: 0 auto; margin-top: 15px;
+        margin: 0 auto;
+        margin-top: 15px;
       }
 
     );
@@ -513,7 +519,7 @@ body {
   position: relative;
   display: flex;
   flex-grow: 1;
-  .size(6);
+  width: 100%;
 
   &__button {
     margin-right: 3px;
@@ -646,10 +652,11 @@ input.phone-input {
 .advantages-container {
   background: #ffffff;
 
+  &__title {
+    margin: 0 auto;
+  }
+
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     .wrapper();
     padding-top: 81px;
 
@@ -692,7 +699,7 @@ input.phone-input {
   .size(6);
 
   .md-block( {
-      .size(12);
+      width: 100%;
     }
 
   );
@@ -825,7 +832,7 @@ input.phone-input {
 }
 
 .button-modal {
-  padding: 15px 89px;
+  padding: 15px 0;
   font-family: "Raleway-SemiBold";
   text-align: center;
   white-space: nowrap;
@@ -835,6 +842,7 @@ input.phone-input {
 
   @media screen and (max-width: 420px) {
     padding: 10px 13px;
+    max-width: 131px;
   }
 
   .xs-block( {
@@ -845,6 +853,8 @@ input.phone-input {
 }
 
 .advantages-container__button-modal {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 52px;
 }
 
@@ -885,18 +895,19 @@ input.phone-input {
 
   &__inner {
     position: relative;
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    flex: 0 1 481px;
     max-width: 481px;
     font-size: 28px;
     line-height: 33px;
 
     .lg-block( {
         margin: 0 15px;
-        padding: 10px 0;
+        padding: 10px 0px;
         align-items: center;
       }
 
@@ -1080,8 +1091,6 @@ input.phone-input {
   .ie11( {
       top: 0%;
       bottom: 0%;
-      left: 393px;
-      right: 0%;
       margin: auto;
     }
 
@@ -1181,6 +1190,7 @@ input.phone-input {
   width: 100%;
 
   @media screen and (max-width: 1100px) {
+    flex: 0 1 auto;
     flex-wrap: wrap;
   }
 
