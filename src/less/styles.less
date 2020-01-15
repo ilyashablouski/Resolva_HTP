@@ -1498,7 +1498,7 @@ input.phone-input {
 .rates-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   min-height: 967px;
   background: linear-gradient(rgba(36, 27, 48, .6)),
     url(../images/backgroung-rates.jpg) no-repeat;
@@ -1514,16 +1514,7 @@ input.phone-input {
   &__content {
     padding-top: 74px;
 
-    .ie11( {
-        width: 100%;
-      }
-
-    );
-
     .wrapper();
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   &__rates-block-items {
@@ -1549,6 +1540,7 @@ input.phone-input {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 100%;
 
   .sm-block( {
       justify-content: center;
@@ -1565,6 +1557,10 @@ input.phone-input {
   max-width: 373px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(68, 68, 68, 0.25);
+
+  .ie11({
+    flex: 0 1 373px;
+  });
 
   .size-sm(6);
   .size-xs(8);
@@ -1655,7 +1651,7 @@ input.phone-input {
   }
 
   &__text {
-    max-width: 373px;
+    max-width: 100%;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -1729,6 +1725,7 @@ input.phone-input {
 }
 
 .company-logo-block {
+  margin-top: auto;
   width: 100%;
   background: #FBFBFB;
   opacity: 0.9;
