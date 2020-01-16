@@ -77,7 +77,11 @@
 
 html {
   scroll-behavior: smooth;
-  width: 100%;
+
+  @media screen and (min-width: 500px) {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
 }
 
 html,
