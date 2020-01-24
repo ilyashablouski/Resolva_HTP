@@ -159,6 +159,12 @@ textarea {
   /* IE 10+ */
 }
 
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+}
+
 h1,
 .h1 {
   font-family: "OpenSans-Bold";
@@ -313,7 +319,7 @@ body {
 .time {
   display: flex;
   align-items: center;
-  .size-xs(6);
+  .xs(width, 50%);
 
   .sm(margin, 0);
 
@@ -332,7 +338,7 @@ body {
 .phone {
   display: flex;
   align-items: center;
-  .size-xs(6);
+  .xs(width, 50%);
 
   .sm(margin, 0);
 
@@ -659,6 +665,7 @@ input.phone-input {
 
   &__header {
     margin: 0 auto;
+    width: 100%;
   }
 
   &__content {
@@ -697,9 +704,19 @@ input.phone-input {
 }
 
 .advantages-item {
+  position: relative;
   padding-right: 20px;
   display: flex;
   transition: box-shadow .125s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 100%;
+    background: linear-gradient(to right, #e0d8e4 0px, #e0d8e4 15px, #f4edf7 16px, #f4edf7 30px, #fdf8ff 31px, #fdf8ff 45px);
+  }
 
   .size(6);
 
@@ -1163,6 +1180,9 @@ input.phone-input {
 
 .stages-container {
   height: 672px;
+  &__header {
+    width: 100%;
+  }
 
   &__stages-description {
     margin-top: 63px;
