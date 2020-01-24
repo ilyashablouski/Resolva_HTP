@@ -3,7 +3,6 @@
 /**
 Choose DOM - nodes
  */
-
 const mainModalNode = document.body;
 const modalNode = document.querySelector('.modal-container');
 const closeModalButton = document.querySelector('.close-button');
@@ -14,6 +13,8 @@ const closeModalButton = document.querySelector('.close-button');
 function toogleTextNode() {
   if ($(window).width() <= 1100) {
     $(this).next().slideToggle(300);
+    $(this).find('.addit-services-arrow')
+        .toggleClass('addit-services-arrow_rotate');
   }
 }
 
