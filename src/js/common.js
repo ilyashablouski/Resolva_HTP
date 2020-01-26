@@ -72,15 +72,35 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /**
-  Close modal window
- */
+  // Overlay close areas
+  modalNode.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target.classList.contains('overlay')) {
+      closeModal();
+    } else {
+      return;
+    }
+  });
+
+
+  // Close modal window
   closeModalButton.addEventListener('click', closeModal);
 });
 
+
 /**
-  Call toogle event
+  jQuery events
  */
 $(document).ready(function() {
+  // Toggle button
   $('.addit-services-header').on('click', toogleTextNode);
+
+  // Phone validate
+  $('.phone-input').mask('+375 (00) 000-00-00', {
+    clearIfNotMatch: true,
+  });
+
+  $('.modal-form__phone-input').mask('+375 (00) 000-00-00', {
+    clearIfNotMatch: true,
+  });
 });
