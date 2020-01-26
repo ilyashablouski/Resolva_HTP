@@ -528,6 +528,10 @@ body {
   &__button {
     white-space: nowrap;
     margin-right: 3px;
+
+    @media screen and (max-width: 330px) {
+      width: 134px;
+    }
   }
 }
 
@@ -546,6 +550,10 @@ input.phone-input {
     }
 
   );
+
+  @media screen and (max-width: 330px) {
+    padding-left: 6px;
+  }
 }
 
 .button {
@@ -1184,6 +1192,7 @@ input.phone-input {
 
 .stages-container {
   height: 672px;
+
   &__header {
     width: 100%;
   }
@@ -2397,16 +2406,15 @@ input.phone-input {
   top: 0;
   height: 100%;
   width: 21.1%;
-  
+
   .lg(width, 15%);
   .md(width, 0%);
 
-  &_left{
+  &_left {
     left: 0;
   }
 
-  &_right{
+  &_right {
     right: 0;
   }
 }
-
