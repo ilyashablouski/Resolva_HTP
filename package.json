@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ilyashablovsky/Resolva_HTP.git#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "eslint": "^6.7.2",
     "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.2",
